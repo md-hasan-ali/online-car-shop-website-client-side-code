@@ -1,0 +1,44 @@
+[
+    {
+        "key": "f1f4f2f1",
+        "name": "Sedan (Maruti Suzuki Ciaz)",
+        "price": "$1250",
+        "desc": " A slightly technical detail is that it usually features a 3-box configuration with each of the boxes categorically used for the engine, passenger, and cargo.",
+        "img": "https://i.ibb.co/hH46VtB/Sedan.jpg"
+    },
+    {
+        "key": "f1f4f2f3",
+        "name": "Crossover (Wonderful Car)",
+        "price": "$1830",
+        "desc": "A coupe is classically defined as a closed two-door car with a fixed roof. Considered sporty by nature, it generally gets just 2 seats or with a smaller-than-average rear",
+        "img": "https://i.ibb.co/0D0mg2L/Crossover.jpg"
+    },
+    {
+        "key": "f1f4f2f4",
+        "name": "Convertible(Audi A3 Cabriolet)",
+        "price": "$2590",
+        "desc": "A convertible, a.k.a. a cabriolet or roadster, is a car with a roof structure that can be 'converted' to allow open-air or enclosed driving. ",
+        "img": "https://i.ibb.co/9c9DJRF/Convertible.jpg"
+    },
+    {
+        "key": "f1f4f2f5",
+        "name": "Mercedes-Benz S-Class",
+        "price": "$1570",
+        "desc": "Mercedes-Benz traces its origins to Karl Benz's creation of the first internal combustion engine in a car, seen in the Benz Patent Motorwagen – .",
+        "img": "https://i.ibb.co/zZFfXs8/Mercedes.jpg"
+    },
+    {
+        "key": "f1f4f2f6",
+        "name": "Audi e-tron GT Car",
+        "price": "$2040",
+        "desc": "The new Audi e-tron GT electric four-door coupe has been launched in India with prices starting at 180 crore for the base Quattro variant and going up to 205 crore for the top-of-the-line RS ",
+        "img": "https://i.ibb.co/wLDhCcj/Audi-car.jpg"
+    },
+    {
+        "key": "f1f4f2f7",
+        "name": "MG Astor Car",
+        "price": "$195",
+        "desc": "The MG Astor is first compact SUV in India that gets both AI features and Level 2 ASAS safety features, but the these ADAS safety features will be available as an option on the VTi-Tech Sharp CVT.",
+        "img": "https://i.ibb.co/K2wLBLV/Mg-Astor.jpg"
+    }
+]
