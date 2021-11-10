@@ -1,0 +1,12 @@
+/* Footer css design  */
+.footer {
+    background: #000;
+    color: #fff;
+    padding: 40px 0;
+}
+.footer-menu a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    margin-bottom: 6px;
+}
