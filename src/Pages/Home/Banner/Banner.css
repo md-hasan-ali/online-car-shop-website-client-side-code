@@ -1,0 +1,11 @@
+.carousel-item img {
+    height: 100vh;
+}
+.carousel-caption {
+    top: 50%;
+    bottom: 1.25rem;
+    left: 50%;
+    color: #fff;
+    text-align: center;
+    transform: translate(-50%,-50%);
+}
