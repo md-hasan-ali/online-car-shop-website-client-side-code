@@ -1,38 +1,50 @@
 import React, { useEffect, useState } from 'react';
 import { Card, Col, Container, Row } from 'react-bootstrap';
-import { useParams } from 'react-router';
+import { useHistory, useParams } from 'react-router';
 import Footer from '../../Sheard/Footer/Footer';
 import Navigation from '../../Sheard/Navigation/Navigation';
 import { useForm } from "react-hook-form";
 import useAuth from '../../../hooks/useAuth';
+import './placeOrder.css'
 
 const PlaceOrder = () => {
     const { id } = useParams();
     const { user } = useAuth()
-    // const [loginData, setLoginData] = useState({});
+    const history = useHistory();
     const [placeOrder, setPlaceOrder] = useState({});
     const { img, desc, name, price } = placeOrder;
 
     const {
         register,
         handleSubmit,
-        reset,
-        formState: { errors },
     } = useForm({
         defaultValues: placeOrder,
     });
-
 
     useEffect(() => {
         fetch(`http://localhost:5000/products/${id}`)
             .then(res => res.json())
             .then(data => {
                 setPlaceOrder(data)
-                reset(data)
             })
     }, [])
     const onSubmit = (data) => {
+        data.status = 'pending'
         console.log(data);
+        fetch('http://localhost:5000/orders', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json',
+            },
+            body: JSON.stringify(data)
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.insertedId) {
+                    alert('Order Successfully Completed')
+                }
+                history.push('/dashboard')
+            })
     }
 
     return (
@@ -45,7 +57,7 @@ const PlaceOrder = () => {
                 <Row>
                     <Col xs={12} md={6}>
                         <Card>
-                            <Card.Img variant="top" src={img} />
+                            <Card.Img style={{ height: '365px' }} variant="top" src={img} />
                             <Card.Body>
                                 <Card.Title><strong>Name </strong>: {name}</Card.Title>
                                 <Card.Text>
@@ -58,16 +70,17 @@ const PlaceOrder = () => {
                         </Card>
                     </Col>
                     <Col xs={12} md={6}>
-                        <form onSubmit={handleSubmit(onSubmit)}>
-                            <input defaultValue={user?.displayName} {...register("name")} required />
-                            <input defaultValue={user?.email} {...register("email")} required />
-                            <input defaultValue={placeOrder?.name} {...register("productName")} required />
-                            <input defaultValue="phone Number" {...register("Phone")} />
-                            <textarea defaultValue="Description" {...register("description")} />
+                        <div className="booking-form">
+                            <form onSubmit={handleSubmit(onSubmit)}>
+                                <input defaultValue={user.displayName} {...register("name")} required />
+                                <input defaultValue={user.email} {...register("email")} required />
+                                <input placeholder='Product Name' {...register("productName")} required />
+                                <input placeholder='Phone Number' {...register("Phone")} required />
+                                <textarea placeholder='Address' style={{ height: '120px' }} {...register("address")} required />
 
-                            <input className='btn btn-danger' type="submit" value="Order Confirm" />
-                        </form>
-
+                                <input className='btn btn-success' type="submit" value="Order Confirm" />
+                            </form>
+                        </div>
                     </Col>
                 </Row>
             </Container>

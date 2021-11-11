@@ -3,6 +3,7 @@ import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
+import './navigation.css'
 
 // navigation component 
 const Navigation = () => {
@@ -16,7 +17,16 @@ const Navigation = () => {
                         <Nav.Link as={Link} to="/home">Home</Nav.Link>
                         <Nav.Link as={Link} to="/explore">Explore</Nav.Link>
 
-                        {user.displayName ? <button onClick={logout} className='btn btn-danger'>Logout</button>
+                        {user.displayName ?
+                            <div>
+                                <Link to='/dashboard'>
+                                    <button className='btn btn-success me-2'>Dashboard</button>
+                                </Link>
+                                <button onClick={logout} className='btn btn-danger'>Logout</button>
+
+                            </div>
+
+
                             : <Nav.Link className='btn btn-danger' as={Link} to="/login">Login</Nav.Link>
                         }
                     </Nav>

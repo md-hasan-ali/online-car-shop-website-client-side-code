@@ -1,0 +1,25 @@
+
+.dashboard {
+    background: linear-gradient(110deg, black,#1b095f,rgb(80, 128, 80),rgb(32, 32, 148), transparent);
+    color: #fff;
+    height: 100vh;
+}
+
+.dashboard ul li {
+    list-style: none;
+    margin-top: 7px;
+    transition: .5s;
+}
+.dashboard ul li:hover {
+    margin-left: 7px;
+}
+.dashboard ul li a {
+    text-decoration: none;
+    color: #fff;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+.dashboard ul {
+    margin-top: 25px;
+}

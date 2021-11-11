@@ -1,0 +1,15 @@
+input.btn.btn-success {
+    width: 30%;
+    padding: 10px;
+    font-size: 18px;
+    font-weight: 500;
+}
+form input, textarea {
+    width: 80%;
+    margin-bottom: 10px;
+    padding: 10px;
+}
+.booking-form {
+    background: gray;
+    padding: 58px 0;
+}

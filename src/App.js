@@ -3,6 +3,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import AuthProvider from './contexts/AuthProvider';
+import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
 import Explore from './Pages/Explore/Explore/Explore';
 import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Login/Login/Login';
@@ -30,6 +31,10 @@ function App() {
 
             <Route path='/explore'>
               <Explore></Explore>
+            </Route>
+
+            <Route path='/dashboard'>
+              <Dashboard></Dashboard>
             </Route>
 
             <Route path='/login'>
