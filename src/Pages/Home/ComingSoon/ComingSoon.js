@@ -45,7 +45,7 @@ const ComingSoon = () => {
                 <div className="row">
                     {
                         newProducts.map(product =>
-                            <div key={product._id} className="col-md-4">
+                            <div key={product.name} className="col-md-4">
                                 <img width='100%' src={product?.img} alt="" />
                                 <p><strong>Name : </strong> {product?.name}</p>
                                 <p><strong>Price : </strong> {product?.price}</p>

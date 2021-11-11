@@ -12,6 +12,7 @@ const Navigation = () => {
                     <Navbar.Brand href="#home">OnLine Car Shop</Navbar.Brand>
                     <Nav className="ms-auto">
                         <Nav.Link as={Link} to="/home">Home</Nav.Link>
+                        <Nav.Link as={Link} to="/login">Login</Nav.Link>
                     </Nav>
                 </Container>
             </Navbar>

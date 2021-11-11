@@ -1,0 +1,14 @@
+/* Reviews design  */
+.review {
+    background: #7DDFFF;
+}
+form input,textarea {
+    width: 80%;
+    margin-bottom: 10px;
+    padding: 8px;
+}
+
+form {
+    margin: 0 auto;
+    text-align: center;
+}
