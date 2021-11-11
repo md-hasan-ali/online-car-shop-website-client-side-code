@@ -1,5 +1,5 @@
 import firebaseInitialization from "../Pages/firebase/initializeFirebase";
-import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged, signOut, signInWithEmailAndPassword } from "firebase/auth";
+import { getAuth, createUserWithEmailAndPassword, onAuthStateChanged, signOut, signInWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { useEffect, useState } from "react";
 
 // firebase initialize
@@ -8,16 +8,23 @@ firebaseInitialization();
 const useFirebase = () => {
     const [user, setUser] = useState({});
     const [error, setError] = useState('')
-    const [isLoading, setIsLoadding] = useState(false)
+    const [isLoading, setIsLoadding] = useState(true)
 
     const auth = getAuth();
     // Register User 
-    const registerUser = (email, password) => {
-        createUserWithEmailAndPassword(auth, email, password)
+    const registerUser = (email, password, name) => {
         setIsLoadding(true)
+        createUserWithEmailAndPassword(auth, email, password)
             .then((result) => {
                 const user = result.user;
+                // update name and send to firebase 
+                updateProfile(auth.currentUser, {
+                    displayName: name
+                }).then(() => {
+                }).catch((error) => {
+                });
             })
+
             .catch((error) => {
                 setError(error.message);
             })
@@ -28,9 +35,9 @@ const useFirebase = () => {
         setIsLoadding(true)
         signInWithEmailAndPassword(auth, email, password)
             .then((result) => {
-                // const destination = location?.state?.from || '/home';
-                // console.log(destination)
-                // history.replace(destination)
+                const destination = location?.state?.from || '/home';
+                console.log(destination)
+                history.replace(destination)
                 const user = result.user;
                 console.log(user)
                 setError('')
@@ -63,7 +70,7 @@ const useFirebase = () => {
             // An error happened.
             setError(error.message)
         })
-        // .finally(() => setIsLoadding(false));
+            .finally(() => setIsLoadding(false));
     }
 
 

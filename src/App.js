@@ -7,6 +7,7 @@ import Home from './Pages/Home/Home/Home';
 import Login from './Pages/Login/Login/Login';
 import Ragistration from './Pages/Login/Registration/Ragistration';
 import PlaceOrder from './Pages/PlaceOrder/PlaceOrder/PlaceOrder';
+import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 
 
 
@@ -34,9 +35,9 @@ function App() {
               <Ragistration></Ragistration>
             </Route>
 
-            <Route path='/placeOrder/:id'>
+            <PrivateRoute path='/placeOrder/:id'>
               <PlaceOrder></PlaceOrder>
-            </Route>
+            </PrivateRoute>
 
           </Switch>
         </Router>

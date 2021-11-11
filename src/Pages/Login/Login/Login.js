@@ -1,11 +1,14 @@
 import React, { useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 
 const Login = () => {
     const [loginData, setLoginData] = useState({})
     const { loginUser } = useAuth();
+
+    const location = useLocation()
+    const history = useHistory();
 
     const handleOnchange = (e) => {
         const field = e.target.name;
@@ -15,7 +18,7 @@ const Login = () => {
         setLoginData(newLoginData)
     }
     const handleSubmit = (e) => {
-        loginUser(loginData.email, loginData.password)
+        loginUser(loginData.email, loginData.password, location, history)
         e.preventDefault()
     }
     return (
@@ -36,9 +39,9 @@ const Login = () => {
                             onChange={handleOnchange}
                             placeholder='Your Passowrd'
                         />
-                        <input type='submit' value='Login' />
+                        <input className='btn btn-danger' type='submit' value='Login' />
                         <Link to='/register'>
-                            <button className='border-0'>New User ? Please Register</button>
+                            <button className='border-0 text-danger'>New User ? Please Register</button>
                         </Link>
                     </form>
                 </Col>

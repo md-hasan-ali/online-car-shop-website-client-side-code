@@ -19,7 +19,7 @@ const Login = () => {
             alert('Your Password did not match');
             return;
         }
-        registerUser(loginData.email, loginData.password);
+        registerUser(loginData.email, loginData.password, loginData.name);
 
         e.preventDefault()
     }
@@ -53,9 +53,9 @@ const Login = () => {
                             onBlur={handleOnBlur}
                             placeholder='Confirm Password'
                         />
-                        <input type='submit' value='Register' />
+                        <input className='btn btn-success' type='submit' value='Register' />
                         <Link to='/login'>
-                            <button className='border-0'>Already Registerd ? Please Login</button>
+                            <button className='border-0 text-danger'>Already Registerd ? Please Login</button>
                         </Link>
                     </form>
                 </Col>
