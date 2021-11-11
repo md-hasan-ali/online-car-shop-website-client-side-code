@@ -31,6 +31,7 @@ const Login = () => {
                     <form onSubmit={handleSubmit}>
                         <input
                             type='text'
+                            required
                             name='name'
                             onBlur={handleOnBlur}
                             placeholder='Your Name'
@@ -40,18 +41,21 @@ const Login = () => {
                             name='email'
                             onBlur={handleOnBlur}
                             placeholder='Your Email'
+                            required
                         />
                         <input
                             type='password'
                             name='password'
                             onBlur={handleOnBlur}
                             placeholder='Your Passowrd'
+                            required
                         />
                         <input
                             type='password'
                             name='confirm_password'
                             onBlur={handleOnBlur}
                             placeholder='Confirm Password'
+                            required
                         />
                         <input className='btn btn-success' type='submit' value='Register' />
                         <Link to='/login'>
