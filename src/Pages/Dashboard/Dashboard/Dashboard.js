@@ -1,14 +1,11 @@
 import React from 'react';
-import Navigation from '../../Sheard/Navigation/Navigation';
 import MyOrders from '../MyOrders/MyOrders';
 import Review from '../Review/Review';
 import './dashboard.css'
 import {
-    BrowserRouter as Router,
     Switch,
     Route,
     Link,
-    useParams,
     useHistory,
     useRouteMatch
 } from "react-router-dom";
@@ -28,7 +25,12 @@ const Dashboard = () => {
     }
     return (
         <div>
-            <Navigation></Navigation>
+            <div className='dashboard-header'>
+                <h2>Dashboard</h2>
+                <Link to='/home'>
+                    <button className='btn btn-danger'>Back To Home</button>
+                </Link>
+            </div>
 
             <div className="container-fluid">
                 <div className="row">
@@ -40,13 +42,13 @@ const Dashboard = () => {
                                     <Link to={`${url}/myOrders`}>My Orders</Link>
                                 </li>
                                 <li>
-                                    <Link to={`${url}/review`}>Review</Link>
+                                    <Link to={`${url}/reviews`}>Review</Link>
                                 </li>
                                 <li>
                                     <Link to={`${url}/pay`}>Pay</Link>
                                 </li>
                                 <li>
-                                    <Link to={`${url}/manageAllProducts`}>Manage All Products</Link>
+                                    <Link to={`${url}/manageAllOrder`}>Manage All Orders</Link>
                                 </li>
                                 <li>
                                     <Link to={`${url}/addProduct`}>Add a Product</Link>
@@ -70,7 +72,7 @@ const Dashboard = () => {
                                     <MyOrders></MyOrders>
                                 </Route>
 
-                                <Route path={`${path}/review`}>
+                                <Route path={`${path}/reviews`}>
                                     <Review></Review>
                                 </Route>
 
@@ -78,7 +80,7 @@ const Dashboard = () => {
                                     <Pay></Pay>
                                 </Route>
 
-                                <Route path={`${path}/manageAllProducts`}>
+                                <Route path={`${path}/manageAllOrder`}>
                                     <ManageAllProduct></ManageAllProduct>
                                 </Route>
 

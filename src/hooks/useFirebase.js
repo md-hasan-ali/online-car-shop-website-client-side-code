@@ -22,6 +22,7 @@ const useFirebase = () => {
                     displayName: name
                 }).then(() => {
                     history.push('/home')
+                    savedUser(email, name)
                 }).catch((error) => {
                 });
             })
@@ -74,7 +75,19 @@ const useFirebase = () => {
             })
             .finally(() => setIsLoadding(false));
     }
-
+    const savedUser = (email, displayName) => {
+        console.log(email, displayName)
+        const user = { email, displayName }
+        fetch('http://localhost:5000/users', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(user)
+        })
+            .then(res => res.json())
+            .then(data => console.log(data))
+    }
 
     return {
         registerUser, user, error, logout, loginUser, isLoading

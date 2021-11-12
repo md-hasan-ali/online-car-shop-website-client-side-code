@@ -23,3 +23,16 @@
 .dashboard ul {
     margin-top: 25px;
 }
+.dashboard-header {
+    background: linear-gradient(3deg, #157347 ,#5234be);
+    padding: 20px 0;
+    color: #fff;
+    text-align: center;
+}
+.dashboard-header h2 {
+    display: inline;
+    margin-right: 15px;
+}
+.dashboard-header button {
+    margin-top: -12px;
+}
