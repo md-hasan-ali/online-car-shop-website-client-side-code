@@ -12,7 +12,7 @@ const useFirebase = () => {
 
     const auth = getAuth();
     // Register User 
-    const registerUser = (email, password, name) => {
+    const registerUser = (email, password, name, history) => {
         setIsLoadding(true)
         createUserWithEmailAndPassword(auth, email, password)
             .then((result) => {
@@ -21,10 +21,10 @@ const useFirebase = () => {
                 updateProfile(auth.currentUser, {
                     displayName: name
                 }).then(() => {
+                    history.push('/home')
                 }).catch((error) => {
                 });
             })
-
             .catch((error) => {
                 setError(error.message);
             })
@@ -62,14 +62,16 @@ const useFirebase = () => {
     }, [])
 
     // sign out user 
-    const logout = () => {
+    const logout = (history) => {
         // setIsLoadding(true)
         signOut(auth).then(() => {
             // Sign-out successful.
-        }).catch((error) => {
-            // An error happened.
-            setError(error.message)
+            history.push('/home')
         })
+            .catch((error) => {
+                // An error happened.
+                setError(error.message)
+            })
             .finally(() => setIsLoadding(false));
     }
 

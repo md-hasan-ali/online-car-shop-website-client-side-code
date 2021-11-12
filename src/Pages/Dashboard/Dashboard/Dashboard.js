@@ -9,20 +9,26 @@ import {
     Route,
     Link,
     useParams,
+    useHistory,
     useRouteMatch
 } from "react-router-dom";
 import Pay from '../Payment/Pay';
 import ManageAllProduct from '../ManageAllProduct/ManageAllProduct';
 import AddNewProduct from '../AddNewProduct/AddNewProduct';
 import MakeAdmin from '../MakeAdmin/MakeAdmin';
+import useAuth from '../../../hooks/useAuth';
 
 const Dashboard = () => {
     let { path, url } = useRouteMatch();
+    const history = useHistory()
+    const { logout } = useAuth()
+
+    const handleLogout = () => {
+        logout(history)
+    }
     return (
         <div>
             <Navigation></Navigation>
-            {/* <MyOrders></MyOrders>
-            <Review></Review> */}
 
             <div className="container-fluid">
                 <div className="row">
@@ -48,8 +54,9 @@ const Dashboard = () => {
                                 <li>
                                     <Link to={`${url}/makeAdmin`}>Make Admin</Link>
                                 </li>
-
+                                <button onClick={handleLogout} className='btn btn-danger mt-4'>Logout</button>
                             </ul>
+
                         </div>
                     </div>
                     <div className="col-md-9">

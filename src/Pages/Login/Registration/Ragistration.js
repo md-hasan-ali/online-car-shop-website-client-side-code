@@ -1,11 +1,12 @@
 import React, { useState } from 'react';
 import { Col, Container, Row } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 
 const Login = () => {
     const [loginData, setLoginData] = useState({})
     const { registerUser } = useAuth()
+    const history = useHistory();
 
     const handleOnBlur = (e) => {
         const field = e.target.name;
@@ -19,7 +20,7 @@ const Login = () => {
             alert('Your Password did not match');
             return;
         }
-        registerUser(loginData.email, loginData.password, loginData.name);
+        registerUser(loginData.email, loginData.password, loginData.name, history);
 
         e.preventDefault()
     }

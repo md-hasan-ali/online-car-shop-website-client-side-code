@@ -1,13 +1,17 @@
 // add necessary file
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useHistory } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import './navigation.css'
 
 // navigation component 
 const Navigation = () => {
     const { user, logout } = useAuth();
+    const history = useHistory();
+    const handleLogout = () => {
+        logout(history)
+    }
     return (
         <>
             <Navbar bg="dark" variant="dark">
@@ -22,7 +26,7 @@ const Navigation = () => {
                                 <Link to='/dashboard'>
                                     <button className='btn btn-success me-2'>Dashboard</button>
                                 </Link>
-                                <button onClick={logout} className='btn btn-danger'>Logout</button>
+                                <button onClick={handleLogout} className='btn btn-danger'>Logout</button>
 
                             </div>
 
