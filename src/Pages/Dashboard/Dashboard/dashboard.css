@@ -36,3 +36,11 @@
 .dashboard-header button {
     margin-top: -12px;
 }
+
+
+/* Media query  */
+@media only screen and (max-width:480px) {
+    .dashboard {
+        height: 60vh;
+    }
+}

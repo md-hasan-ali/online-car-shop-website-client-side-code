@@ -26,7 +26,7 @@ const Dashboard = () => {
         logout(history)
     }
     return (
-        <div>
+        <React.Fragment>
             <div className='dashboard-header'>
                 <h2>Dashboard</h2>
                 <Link to='/home'>
@@ -116,7 +116,7 @@ const Dashboard = () => {
                     </div>
                 </div>
             </div>
-        </div >
+        </React.Fragment>
     );
 };
 

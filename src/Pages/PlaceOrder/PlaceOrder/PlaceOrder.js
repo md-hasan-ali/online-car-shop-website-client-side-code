@@ -32,7 +32,6 @@ const PlaceOrder = () => {
     }, [])
     const onSubmit = (data) => {
         data.status = 'pending'
-        console.log(data);
         fetch('https://afternoon-oasis-56615.herokuapp.com/orders', {
             method: 'POST',
             headers: {

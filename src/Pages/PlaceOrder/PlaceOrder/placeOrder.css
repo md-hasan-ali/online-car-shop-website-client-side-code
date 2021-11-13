@@ -15,3 +15,10 @@ form input, textarea {
     background: gray;
     padding: 58px 0;
 }
+
+/* MObile Responsive  */
+@media only screen and (max-width:480px) {
+    .booking-form input.btn.btn-success {
+        width: 50%;
+    }
+}
