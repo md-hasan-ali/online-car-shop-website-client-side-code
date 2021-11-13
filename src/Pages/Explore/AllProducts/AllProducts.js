@@ -13,8 +13,8 @@ const AllProducts = () => {
     }, [])
     console.log(allProducts)
     return (
-        <div className='container py-5'>
-            <h2 className='pb-5 text-center'>Our All Products</h2>
+        <div className='container py-5 mt-5'>
+            <h2 className='pb-5 text-center text-success'>Our All Products</h2>
             <div className="row row-cols-1 row-cols-md-3 g-4">
                 {
                     allProducts.map(product =>

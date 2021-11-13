@@ -9,6 +9,7 @@ form input, textarea {
     width: 80%;
     margin-bottom: 10px;
     padding: 10px;
+    border: 1px solid gray;
 }
 .booking-form {
     background: gray;

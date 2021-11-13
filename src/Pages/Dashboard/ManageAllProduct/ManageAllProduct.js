@@ -10,7 +10,6 @@ const ManageAllProduct = () => {
             .then(res => res.json())
             .then(data => setManageOrders(data))
     }, [deletedCount])
-    console.log(manageOrders)
 
     // delete single order
     const handleDelete = (id) => {

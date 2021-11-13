@@ -2,6 +2,10 @@
 nav.navbar.navbar-expand.navbar-dark.bg-dark {
     padding: 14px 0;
 }
+.navbar-dark .navbar-nav .nav-link {
+    color: #fff;
+    font-size: 18px;
+}
 .navbar-brand {
     color: #fff;
     font-size: 24px;

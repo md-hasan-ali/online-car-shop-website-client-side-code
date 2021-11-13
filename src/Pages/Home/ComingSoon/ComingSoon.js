@@ -1,6 +1,8 @@
 // Import Necessary file 
 import React from 'react';
 import img from '../../../images/banner.jpg'
+import img2 from '../../../images/lattest2.jpg'
+import img3 from '../../../images/lattest6.jpg'
 import './comming-soon.css'
 
 // Comming Soon Product Object 
@@ -26,12 +28,12 @@ const newProducts = [
         price: '$5000',
     },
     {
-        img: img,
+        img: img2,
         name: 'Audi 2021',
         price: '$2900',
     },
     {
-        img: img,
+        img: img3,
         name: 'BMW 35',
         price: '$22000',
     },

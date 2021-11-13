@@ -1,50 +1,24 @@
 // add necessary file 
 import React from 'react';
-import { Carousel } from 'react-bootstrap';
-import bannerImg from '../../../images/banner1.jpg'
 import './Banner.css'
 
 // Banner Component 
 const Banner = () => {
     return (
-        <div className="carousel-item-banner">
-            <Carousel>
-                <Carousel.Item>
-                    <img
-                        className="d-block w-100"
-                        src={bannerImg}
-                        alt="First slide"
-                    />
-                    <Carousel.Caption>
-                        <h3>First slide label</h3>
-                        <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                        className="d-block w-100"
-                        src={bannerImg}
-                        alt="Second slide"
-                    />
-
-                    <Carousel.Caption>
-                        <h3>Second slide label</h3>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-                <Carousel.Item>
-                    <img
-                        className="d-block w-100"
-                        src={bannerImg}
-                        alt="Third slide"
-                    />
-
-                    <Carousel.Caption>
-                        <h3>Third slide label</h3>
-                        <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur.</p>
-                    </Carousel.Caption>
-                </Carousel.Item>
-            </Carousel>
+        <div className="banner-area">
+            <div className="container">
+                <div className="row">
+                    <div className="col-12">
+                        <div className="banner-content">
+                            <h4 style={{ fontStyle: 'italic' }}>Welcome To ,</h4>
+                            <h2>Our OnLine Car ShoP</h2>
+                            <p>definitions of cars say that they run primarily on roads, seat one-to-eight people, have four wheels and mainly transport people rather than goods</p>
+                            <button className='btn btn-success me-2'>About Us</button>
+                            <button className='btn btn-danger'>About Us</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     );
 };

@@ -1,5 +1,7 @@
+/* Login css design  */
 .login-area {
     background-color: lightslategrey;
+    margin-top: 60px;
 }
 .login-form form input, textarea {
     width: 100%;

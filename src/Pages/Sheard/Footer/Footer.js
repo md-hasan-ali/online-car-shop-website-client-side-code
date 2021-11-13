@@ -17,7 +17,8 @@ const Footer = () => {
                     </div>
                     <div className="col-md-4">
                         <div className="social-icon">
-
+                            <h2>About Us</h2>
+                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum vel eveniet amet, nostrum nihil ducimus.</p>
                         </div>
                     </div>
                     <div className="col-md-4">
