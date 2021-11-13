@@ -9,6 +9,7 @@ const useFirebase = () => {
     const [user, setUser] = useState({});
     const [error, setError] = useState('')
     const [isLoading, setIsLoadding] = useState(true)
+    const [admin, setAdmin] = useState(false)
 
     const auth = getAuth();
     // Register User 
@@ -62,6 +63,13 @@ const useFirebase = () => {
         return () => unSubscribe;
     }, [])
 
+    //admin 
+    useEffect(() => {
+        fetch(`http://localhost:5000/users/${user.email}`)
+            .then(res => res.json())
+            .then(data => setAdmin(data.admin))
+    }, [user.email])
+
     // sign out user 
     const logout = (history) => {
         // setIsLoadding(true)
@@ -76,7 +84,6 @@ const useFirebase = () => {
             .finally(() => setIsLoadding(false));
     }
     const savedUser = (email, displayName) => {
-        console.log(email, displayName)
         const user = { email, displayName }
         fetch('http://localhost:5000/users', {
             method: 'POST',
@@ -90,7 +97,7 @@ const useFirebase = () => {
     }
 
     return {
-        registerUser, user, error, logout, loginUser, isLoading
+        registerUser, user, error, logout, loginUser, isLoading, admin
     }
 
 };

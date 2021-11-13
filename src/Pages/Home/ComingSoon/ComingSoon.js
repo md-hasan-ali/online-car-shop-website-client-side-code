@@ -1,6 +1,8 @@
+// Import Necessary file 
 import React from 'react';
 import img from '../../../images/banner.jpg'
 
+// Comming Soon Product Object 
 const newProducts = [
     {
         img: img,
@@ -34,6 +36,7 @@ const newProducts = [
     },
 ]
 
+// Comming Soon Component 
 const ComingSoon = () => {
     return (
         <div className='comming-soon-product py-5'>

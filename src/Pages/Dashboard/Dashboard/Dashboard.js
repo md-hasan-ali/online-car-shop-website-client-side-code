@@ -1,3 +1,4 @@
+// import necessary file 
 import React from 'react';
 import MyOrders from '../MyOrders/MyOrders';
 import Review from '../Review/Review';
@@ -15,10 +16,11 @@ import AddNewProduct from '../AddNewProduct/AddNewProduct';
 import MakeAdmin from '../MakeAdmin/MakeAdmin';
 import useAuth from '../../../hooks/useAuth';
 
+// Dashboard Component
 const Dashboard = () => {
     let { path, url } = useRouteMatch();
     const history = useHistory()
-    const { logout } = useAuth()
+    const { logout, admin } = useAuth()
 
     const handleLogout = () => {
         logout(history)
@@ -47,15 +49,20 @@ const Dashboard = () => {
                                 <li>
                                     <Link to={`${url}/pay`}>Pay</Link>
                                 </li>
-                                <li>
-                                    <Link to={`${url}/manageAllOrder`}>Manage All Orders</Link>
-                                </li>
-                                <li>
-                                    <Link to={`${url}/addProduct`}>Add a Product</Link>
-                                </li>
-                                <li>
-                                    <Link to={`${url}/makeAdmin`}>Make Admin</Link>
-                                </li>
+                                {admin &&
+                                    <div>
+                                        <li>
+                                            <Link to={`${url}/manageAllOrder`}>Manage All Orders</Link>
+                                        </li>
+                                        <li>
+                                            <Link to={`${url}/addProduct`}>Add a Product</Link>
+                                        </li>
+                                        <li>
+                                            <Link to={`${url}/makeAdmin`}>Make Admin</Link>
+                                        </li>
+                                    </div>
+
+                                }
                                 <button onClick={handleLogout} className='btn btn-danger mt-4'>Logout</button>
                             </ul>
 

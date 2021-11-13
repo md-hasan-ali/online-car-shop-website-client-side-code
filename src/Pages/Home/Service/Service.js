@@ -16,7 +16,7 @@ const Service = (props) => {
                 </div>
                 <div>
                     <Link to={`placeOrder/${_id}`}>
-                        <button className='btn btn-success m-2'>Purchase Now <i class="fas fa-angle-double-right"></i></button>
+                        <button className='btn btn-success m-2'>Purchase Now <i className="fas fa-angle-double-right"></i></button>
                     </Link>
                 </div>
             </div>

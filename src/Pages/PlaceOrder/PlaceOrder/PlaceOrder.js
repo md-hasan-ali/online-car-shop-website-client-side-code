@@ -1,3 +1,4 @@
+// Import Necessary file 
 import React, { useEffect, useState } from 'react';
 import { Card, Col, Container, Row } from 'react-bootstrap';
 import { useHistory, useParams } from 'react-router';
@@ -7,6 +8,7 @@ import { useForm } from "react-hook-form";
 import useAuth from '../../../hooks/useAuth';
 import './placeOrder.css'
 
+// PlaceOrder Componenet 
 const PlaceOrder = () => {
     const { id } = useParams();
     const { user } = useAuth()

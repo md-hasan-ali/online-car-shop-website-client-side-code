@@ -11,8 +11,6 @@ import Ragistration from './Pages/Login/Registration/Ragistration';
 import PlaceOrder from './Pages/PlaceOrder/PlaceOrder/PlaceOrder';
 import PrivateRoute from './Pages/PrivateRoute/PrivateRoute';
 
-
-
 // app component 
 function App() {
   return (

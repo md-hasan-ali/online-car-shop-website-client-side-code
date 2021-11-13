@@ -1,3 +1,4 @@
+// firebase initializetion file 
 import firebaseConfig from "./firebaseConfig";
 import { initializeApp } from "firebase/app";
 

@@ -1,6 +1,8 @@
+// Import Necessary file 
 import React, { useEffect, useState } from 'react';
 import './Review.css'
 
+// Client Review Component 
 const Review = () => {
     const [reviews, setReviews] = useState([]);
 
@@ -11,7 +13,6 @@ const Review = () => {
                 setReviews(data)
             })
     }, [])
-    console.log(reviews)
 
     return (
         <div>

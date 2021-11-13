@@ -1,6 +1,8 @@
+// Import Necessary file 
 import React, { useEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 
+// All Product Componet to show explorer page
 const AllProducts = () => {
     const [allProducts, setAllProducts] = useState([]);
 
@@ -13,7 +15,7 @@ const AllProducts = () => {
     return (
         <div className='container py-5'>
             <h2 className='pb-5 text-center'>Our All Products</h2>
-            <div class="row row-cols-1 row-cols-md-3 g-4">
+            <div className="row row-cols-1 row-cols-md-3 g-4">
                 {
                     allProducts.map(product =>
                         <div key={product._id} className="col">
@@ -26,7 +28,7 @@ const AllProducts = () => {
                                 </div>
                                 <div>
                                     <Link to={`placeOrder/${product._id}`}>
-                                        <button className='btn btn-success m-2'>Purchase Now <i class="fas fa-angle-double-right"></i></button>
+                                        <button className='btn btn-success m-2'>Purchase Now <i className="fas fa-angle-double-right"></i></button>
                                     </Link>
                                 </div>
                             </div>

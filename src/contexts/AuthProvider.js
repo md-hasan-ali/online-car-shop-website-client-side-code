@@ -1,6 +1,8 @@
+// Import Necessary file 
 import React, { createContext } from 'react';
 import useFirebase from '../hooks/useFirebase';
 
+// Create Context Api
 export const AuthContext = createContext(null)
 
 const AuthProvider = ({ children }) => {
