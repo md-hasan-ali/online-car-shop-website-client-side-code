@@ -1,6 +1,7 @@
 // add necessary file
 import React, { useEffect, useState } from 'react';
 import Service from '../Service/Service';
+import './services.css'
 
 // Services component 
 const Services = () => {
@@ -16,7 +17,7 @@ const Services = () => {
         <div className='services-area py-5'>
             <div className="container">
                 <div className="section-title mb-5 text-center">
-                    <h2>Our Products</h2>
+                    <h2 className='text-success'>Our Products</h2>
                 </div>
                 <div className="row row-cols-1 row-cols-md-3 g-4">
                     {

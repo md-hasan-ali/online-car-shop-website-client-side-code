@@ -1,0 +1,7 @@
+/* single service design  */
+.single-card {
+    transition: .5s;
+}
+.single-card:hover {
+    box-shadow: 5px 5px 12px #000;
+}

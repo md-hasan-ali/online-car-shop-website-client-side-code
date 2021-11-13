@@ -40,16 +40,19 @@ const Dashboard = () => {
                         <div className="dashboard">
                             <h2 className='text-center pt-3 text-info'>Dashboard</h2>
                             <ul>
-                                <li>
-                                    <Link to={`${url}/myOrders`}>My Orders</Link>
-                                </li>
-                                <li>
-                                    <Link to={`${url}/reviews`}>Review</Link>
-                                </li>
-                                <li>
-                                    <Link to={`${url}/pay`}>Pay</Link>
-                                </li>
-                                {admin &&
+                                {!admin ?
+                                    <div>
+                                        <li>
+                                            <Link to={`${url}/myOrders`}>My Orders</Link>
+                                        </li>
+                                        <li>
+                                            <Link to={`${url}/reviews`}>Review</Link>
+                                        </li>
+                                        <li>
+                                            <Link to={`${url}/pay`}>Pay</Link>
+                                        </li>
+                                    </div>
+                                    :
                                     <div>
                                         <li>
                                             <Link to={`${url}/manageAllOrder`}>Manage All Orders</Link>
@@ -71,34 +74,43 @@ const Dashboard = () => {
                     <div className="col-md-9">
                         <div className="dashboard-content">
                             <Switch>
-                                <Route exact path={path}>
-                                    <MyOrders></MyOrders>
-                                </Route>
 
-                                <Route path={`${path}/myOrders`}>
-                                    <MyOrders></MyOrders>
-                                </Route>
+                                {!admin ? <div>
+                                    <Route exact path={path}>
+                                        <MyOrders></MyOrders>
+                                    </Route>
 
-                                <Route path={`${path}/reviews`}>
-                                    <Review></Review>
-                                </Route>
+                                    <Route path={`${path}/myOrders`}>
+                                        <MyOrders></MyOrders>
+                                    </Route>
 
-                                <Route path={`${path}/pay`}>
-                                    <Pay></Pay>
-                                </Route>
+                                    <Route path={`${path}/reviews`}>
+                                        <Review></Review>
+                                    </Route>
 
-                                <Route path={`${path}/manageAllOrder`}>
-                                    <ManageAllProduct></ManageAllProduct>
-                                </Route>
+                                    <Route path={`${path}/pay`}>
+                                        <Pay></Pay>
+                                    </Route>
+                                </div>
+                                    :
+                                    <div>
+                                        <Route exact path={path}>
+                                            <ManageAllProduct></ManageAllProduct>
+                                        </Route>
 
-                                <Route path={`${path}/addProduct`}>
-                                    <AddNewProduct></AddNewProduct>
-                                </Route>
+                                        <Route path={`${path}/manageAllOrder`}>
+                                            <ManageAllProduct></ManageAllProduct>
+                                        </Route>
 
-                                <Route path={`${path}/makeAdmin`}>
-                                    <MakeAdmin></MakeAdmin>
-                                </Route>
+                                        <Route path={`${path}/addProduct`}>
+                                            <AddNewProduct></AddNewProduct>
+                                        </Route>
 
+                                        <Route path={`${path}/makeAdmin`}>
+                                            <MakeAdmin></MakeAdmin>
+                                        </Route>
+                                    </div>
+                                }
                             </Switch>
                         </div>
                     </div>

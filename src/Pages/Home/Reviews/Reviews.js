@@ -15,7 +15,7 @@ const Review = () => {
     }, [])
 
     return (
-        <div>
+        <div className='client-review'>
             <h2 className='text-center py-4'>What Clients Say ?</h2>
             <div className="container">
                 <div className="row">

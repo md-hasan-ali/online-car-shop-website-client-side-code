@@ -5,6 +5,8 @@ import { Link, useHistory } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import Footer from '../../Sheard/Footer/Footer';
 import Navigation from '../../Sheard/Navigation/Navigation';
+import loginImg from '../../../images/lattest2.jpg'
+import './registraiton.css'
 
 // Registration Component 
 const Login = () => {
@@ -31,51 +33,57 @@ const Login = () => {
     return (
         <>
             <Navigation></Navigation>
-            <Container className='py-5'>
-                <h2 className='text-center pb-5 text-success'>Please Register</h2>
-                <Row>
-                    <Col xs={12} md={6}>
-                        <form onSubmit={handleSubmit}>
-                            <input
-                                type='text'
-                                required
-                                name='name'
-                                onBlur={handleOnBlur}
-                                placeholder='Your Name'
-                            />
-                            <input
-                                type='email'
-                                name='email'
-                                onBlur={handleOnBlur}
-                                placeholder='Your Email'
-                                required
-                            />
-                            <input
-                                type='password'
-                                name='password'
-                                onBlur={handleOnBlur}
-                                placeholder='Your Passowrd'
-                                required
-                            />
-                            <input
-                                type='password'
-                                name='confirm_password'
-                                onBlur={handleOnBlur}
-                                placeholder='Confirm Password'
-                                required
-                            />
-                            <input className='btn btn-success' type='submit' value='Register' />
-                            <Link to='/login'>
-                                <button className='border-0 text-danger'>Already Registerd ? Please Login</button>
-                            </Link>
-                        </form>
-                    </Col>
-                    <Col xs={12} md={6}>
+            <div className="ragistration-area">
+                <Container className='py-5'>
+                    <h2 className='text-center pb-5 text-white'>Please Register</h2>
+                    <Row style={{ alignItems: 'center' }}>
+                        <Col xs={12} md={5}>
+                            <div className="login-form">
+                                <form onSubmit={handleSubmit}>
+                                    <input
+                                        type='text'
+                                        required
+                                        name='name'
+                                        onBlur={handleOnBlur}
+                                        placeholder='Your Name'
+                                    />
+                                    <input
+                                        type='email'
+                                        name='email'
+                                        onBlur={handleOnBlur}
+                                        placeholder='Your Email'
+                                        required
+                                    />
+                                    <input
+                                        type='password'
+                                        name='password'
+                                        onBlur={handleOnBlur}
+                                        placeholder='Your Passowrd'
+                                        required
+                                    />
+                                    <input
+                                        type='password'
+                                        name='confirm_password'
+                                        onBlur={handleOnBlur}
+                                        placeholder='Confirm Password'
+                                        required
+                                    />
+                                    <input className='btn btn-success' type='submit' value='Register' />
+                                    <Link to='/login'>
+                                        <button className='border-0 text-danger'>Already Registerd ? Please Login</button>
+                                    </Link>
+                                </form>
+                            </div>
+                        </Col>
+                        <Col xs={12} md={7}>
+                            <div className="login-img">
+                                <img style={{ width: '100%' }} src={loginImg} alt="" />
+                            </div>
+                        </Col>
 
-                    </Col>
-
-                </Row>
-            </Container>
+                    </Row>
+                </Container>
+            </div>
             <Footer></Footer>
         </>
     );

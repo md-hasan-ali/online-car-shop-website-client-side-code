@@ -1,21 +1,22 @@
 // Import Necessary file 
 import React from 'react';
 import img from '../../../images/banner.jpg'
+import './comming-soon.css'
 
 // Comming Soon Product Object 
 const newProducts = [
     {
-        img: img,
+        img: 'https://i.ibb.co/mtBfPCv/l5.jpg',
         name: 'Toyota Prius',
         price: '$2000',
     },
     {
-        img: img,
+        img: 'https://i.ibb.co/NysMLry/l7.jpg',
         name: 'Toyota Prius specs',
         price: '$2500',
     },
     {
-        img: img,
+        img: 'https://i.ibb.co/XXsZ5kd/l8.jpg',
         name: '2020 Ford Mustang',
         price: '$2800',
     },
@@ -42,16 +43,18 @@ const ComingSoon = () => {
         <div className='comming-soon-product py-5'>
             <div className="container">
                 <div className="section-title pb-5 text-center">
-                    <h2>Our Comming Soon Products</h2>
+                    <h2 className='text-success'>Our Comming Soon Products</h2>
                     <p>If You want to buy our lettest Model Car, Then Your are Welcome!!!</p>
                 </div>
                 <div className="row">
                     {
                         newProducts.map(product =>
                             <div key={product.name} className="col-md-4">
-                                <img width='100%' src={product?.img} alt="" />
-                                <p><strong>Name : </strong> {product?.name}</p>
-                                <p><strong>Price : </strong> {product?.price}</p>
+                                <div className="single-service1">
+                                    <img width='100%' src={product?.img} alt="" />
+                                    <p><strong>Name : </strong> {product?.name}</p>
+                                    <p><strong>Price : </strong> {product?.price}</p>
+                                </div>
                             </div>
                         )
                     }

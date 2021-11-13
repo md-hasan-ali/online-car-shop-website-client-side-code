@@ -1,13 +1,14 @@
 // add necessary file 
 import React from 'react';
 import { Link } from 'react-router-dom';
+import './service.css'
 
 // Service componet 
 const Service = (props) => {
     const { img, desc, price, name, _id } = props.service;
     return (
         <div className="col">
-            <div className="card h-100">
+            <div className="card h-100 single-card">
                 <img height='250px' src={img} className="card-img-top" alt="..." />
                 <div className="card-body">
                     <h5 className="card-title">{name}</h5>

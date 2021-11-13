@@ -5,6 +5,8 @@ import { Link, useLocation, useHistory } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import Footer from '../../Sheard/Footer/Footer';
 import Navigation from '../../Sheard/Navigation/Navigation';
+import loginImg from '../../../images/lattest2.jpg'
+import './login.css'
 
 // Login Component 
 const Login = () => {
@@ -28,35 +30,41 @@ const Login = () => {
     return (
         <>
             <Navigation></Navigation>
-            <Container className='py-5'>
-                <h2 className='text-center pb-5 text-success'>Please Login</h2>
-                <Row>
-                    <Col xs={12} md={6}>
-                        <form onSubmit={handleSubmit}>
-                            <input
-                                type='email'
-                                name='email'
-                                onChange={handleOnchange}
-                                placeholder='Your Email'
-                            />
-                            <input
-                                type='password'
-                                name='password'
-                                onChange={handleOnchange}
-                                placeholder='Your Passowrd'
-                            />
-                            <input className='btn btn-success' type='submit' value='Login' />
-                            <Link to='/register'>
-                                <button className='border-0 text-danger'>New User ? Please Register</button>
-                            </Link>
-                        </form>
-                    </Col>
-                    <Col xs={12} md={6}>
+            <div className='login-area'>
+                <Container className='py-5'>
+                    <h2 className='text-center pb-5 text-white'>Please Login</h2>
+                    <Row style={{ alignItems: 'center' }}>
+                        <Col xs={12} md={5}>
+                            <div className="login-form">
+                                <form onSubmit={handleSubmit}>
+                                    <input
+                                        type='email'
+                                        name='email'
+                                        onChange={handleOnchange}
+                                        placeholder='Your Email'
+                                    />
+                                    <input
+                                        type='password'
+                                        name='password'
+                                        onChange={handleOnchange}
+                                        placeholder='Your Passowrd'
+                                    />
+                                    <input className='btn btn-success' type='submit' value='Login' />
+                                    <Link to='/register'>
+                                        <button className='border-0 text-danger'>New User ? Please Register</button>
+                                    </Link>
+                                </form>
+                            </div>
+                        </Col>
+                        <Col xs={12} md={7}>
+                            <div className="login-img">
+                                <img style={{ width: '100%' }} src={loginImg} alt="" />
+                            </div>
+                        </Col>
 
-                    </Col>
-
-                </Row>
-            </Container>
+                    </Row>
+                </Container>
+            </div>
             <Footer></Footer>
         </>
     );

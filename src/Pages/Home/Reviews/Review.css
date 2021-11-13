@@ -1,5 +1,14 @@
 /* Reviews design  */
-
+.client-review {
+    background: #223044;
+    color: #fff;
+    padding: 50px 0;
+}
+.review-content {
+    border: 2px dotted #fff;
+    padding: 10px;
+    margin-bottom: 25px;
+}
 form input,textarea {
     width: 80%;
     margin-bottom: 10px;

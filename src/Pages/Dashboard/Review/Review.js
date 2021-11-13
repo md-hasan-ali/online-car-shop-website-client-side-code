@@ -9,7 +9,7 @@ import './review2.css'
 const Reviews = () => {
     const { user } = useAuth();
     const history = useHistory()
-    const { register, handleSubmit, formState: { errors } } = useForm();
+    const { register, handleSubmit } = useForm();
     const onSubmit = data => {
         fetch('https://afternoon-oasis-56615.herokuapp.com/review', {
             method: 'POST',
