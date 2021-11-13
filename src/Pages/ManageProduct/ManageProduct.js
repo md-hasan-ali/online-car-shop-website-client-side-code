@@ -17,7 +17,7 @@ const ManageProduct = () => {
     const handleDelete = (id) => {
         const proceed = window.confirm('Are You sure,You want to delete?');
         if (proceed) {
-            fetch(`http://localhost:5000/manage/${id}`, {
+            fetch(`https://afternoon-oasis-56615.herokuapp.com/manage/${id}`, {
                 method: 'DELETE',
                 headers: {
                     'content-type': 'application/json'
