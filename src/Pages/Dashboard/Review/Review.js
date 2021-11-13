@@ -26,7 +26,6 @@ const Reviews = () => {
                 history.push('/home')
             })
     };
-
     return (
         <div className="review">
             <div className='container py-5'>
