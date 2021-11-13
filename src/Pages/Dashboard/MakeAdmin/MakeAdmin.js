@@ -25,7 +25,7 @@ const MakeAdmin = () => {
             <form onSubmit={handleSubmit(onSubmit)}>
                 <input type='email' placeholder='Email' {...register("email")} required />
 
-                <input className='btn btn-success' type="submit" value="Make Admin" />
+                <input className='btn btn-success' style={{ width: '145px', display: 'block', margin: '0 auto' }} type="submit" value="Make Admin" />
             </form>
         </div>
     );

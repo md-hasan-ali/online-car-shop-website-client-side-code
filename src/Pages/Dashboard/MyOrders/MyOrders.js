@@ -14,21 +14,23 @@ const MyOrders = () => {
 
     // Delete Single Orders
     const handleDelete = (id) => {
-        console.log(id)
-        fetch(`https://afternoon-oasis-56615.herokuapp.com/orders?email=${user.email}&id=${id}`, {
-            method: 'DELETE',
-            headers: {
-                'content-type': 'application/josn'
-            }
-        })
-            .then(res => res.json())
-            .then(data => {
-                if (data.deletedCount) {
-                    setDeletedCount(true)
-                } else {
-                    setDeletedCount(false)
+        const proceed = window.confirm('Are You sure,You want to delete?');
+        if (proceed) {
+            fetch(`https://afternoon-oasis-56615.herokuapp.com/orders?email=${user.email}&id=${id}`, {
+                method: 'DELETE',
+                headers: {
+                    'content-type': 'application/josn'
                 }
             })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.deletedCount) {
+                        setDeletedCount(true)
+                    } else {
+                        setDeletedCount(false)
+                    }
+                })
+        }
     }
     return (
         <div>

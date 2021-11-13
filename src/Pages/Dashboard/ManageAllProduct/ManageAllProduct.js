@@ -13,20 +13,23 @@ const ManageAllProduct = () => {
 
     // delete single order
     const handleDelete = (id) => {
-        fetch(`https://afternoon-oasis-56615.herokuapp.com/singleOrder/${id}`, {
-            method: 'DELETE',
-            headers: {
-                'content-type': 'application/json'
-            }
-        })
-            .then(res => res.json())
-            .then(data => {
-                if (data.deletedCount) {
-                    setDeletedCount(true)
-                } else {
-                    setDeletedCount(false)
+        const proceed = window.confirm('Are You sure,You want to delete?');
+        if (proceed) {
+            fetch(`https://afternoon-oasis-56615.herokuapp.com/singleOrder/${id}`, {
+                method: 'DELETE',
+                headers: {
+                    'content-type': 'application/json'
                 }
             })
+                .then(res => res.json())
+                .then(data => {
+                    if (data.deletedCount) {
+                        setDeletedCount(true)
+                    } else {
+                        setDeletedCount(false)
+                    }
+                })
+        }
     }
 
     return (

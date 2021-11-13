@@ -18,7 +18,7 @@ const Footer = () => {
                     <div className="col-md-4">
                         <div className="social-icon">
                             <h2>About Us</h2>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum vel eveniet amet, nostrum nihil ducimus.</p>
+                            <p>definitions of cars say that they run primarily on roads, seat one-to-eight people, have four wheels and mainly transport people rather than goods</p>
                         </div>
                     </div>
                     <div className="col-md-4">

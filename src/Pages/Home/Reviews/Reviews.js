@@ -2,6 +2,7 @@
 import React, { useEffect, useState } from 'react';
 import './Review.css'
 import Rating from 'react-rating'
+import { Spinner } from 'react-bootstrap';
 
 // Client Review Component 
 const Review = () => {
@@ -19,27 +20,31 @@ const Review = () => {
         <div className='client-review'>
             <h2 className='text-center py-4'>What Clients Say ?</h2>
             <div className="container">
-                <div className="row">
-                    {
-                        reviews.map((review, index) =>
-                            <div key={review._id} className="col-md-4">
-                                <div className="review-content">
-                                    {/* <p>{index}</p> */}
-                                    <h5>Name: {review.name}</h5>
-                                    <p>Email: {review.emial}</p>
-                                    <Rating
-                                        style={{ color: 'gold' }}
-                                        initialRating={review.rating}
-                                        emptySymbol="far fa-star"
-                                        fullSymbol="fas fa-star"
-                                        readonly
-                                    />
-                                    <p>message: {review.message}</p>
+                {reviews.length === 0 ?
+                    <div>
+                        <Spinner animation="border" variant="danger" />
+                    </div>
+                    : <div className="row">
+                        {
+                            reviews.map((review, index) =>
+                                <div key={review._id} className="col-md-4">
+                                    <div className="review-content">
+                                        {/* <p>{index}</p> */}
+                                        <h5>Name: {review.name}</h5>
+                                        <p>Email: {review.emial}</p>
+                                        <Rating
+                                            style={{ color: 'gold' }}
+                                            initialRating={review.rating}
+                                            emptySymbol="far fa-star"
+                                            fullSymbol="fas fa-star"
+                                            readonly
+                                        />
+                                        <p>message: {review.message}</p>
+                                    </div>
                                 </div>
-                            </div>
-                        )
-                    }
-                </div>
+                            )
+                        }
+                    </div>}
             </div>
         </div>
     );
