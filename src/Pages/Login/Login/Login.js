@@ -51,7 +51,7 @@ const Login = () => {
                                     />
                                     <input className='btn btn-success' type='submit' value='Login' />
                                     <Link to='/register'>
-                                        <button className='border-0 text-danger'>New User ? Please Register</button>
+                                        <button className='border-0 text-danger mb-3'>New User ? Please Register</button>
                                     </Link>
                                 </form>
                             </div>

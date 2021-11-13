@@ -11,3 +11,12 @@ nav.navbar.navbar-expand.navbar-dark.bg-dark {
     font-size: 24px;
     font-weight: 700;
 }
+
+/* Responsive mobile device  */
+
+@media only screen and (max-width:480px) {
+    a.btn.btn-danger.nav-link {
+        width: 100px;
+    }
+}
+

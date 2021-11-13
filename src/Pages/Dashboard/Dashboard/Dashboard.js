@@ -15,6 +15,7 @@ import ManageAllProduct from '../ManageAllProduct/ManageAllProduct';
 import AddNewProduct from '../AddNewProduct/AddNewProduct';
 import MakeAdmin from '../MakeAdmin/MakeAdmin';
 import useAuth from '../../../hooks/useAuth';
+import ManageProduct from '../../ManageProduct/ManageProduct';
 
 // Dashboard Component
 const Dashboard = () => {
@@ -56,6 +57,9 @@ const Dashboard = () => {
                                     <div>
                                         <li>
                                             <Link to={`${url}/manageAllOrder`}>Manage All Orders</Link>
+                                        </li>
+                                        <li>
+                                            <Link to={`${url}/manageProduct`}>Manage Products</Link>
                                         </li>
                                         <li>
                                             <Link to={`${url}/addProduct`}>Add a Product</Link>
@@ -108,6 +112,9 @@ const Dashboard = () => {
 
                                         <Route path={`${path}/makeAdmin`}>
                                             <MakeAdmin></MakeAdmin>
+                                        </Route>
+                                        <Route path={`${path}/manageProduct`}>
+                                            <ManageProduct></ManageProduct>
                                         </Route>
                                     </div>
                                 }

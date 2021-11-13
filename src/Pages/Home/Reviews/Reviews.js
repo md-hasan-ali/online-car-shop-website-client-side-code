@@ -1,6 +1,7 @@
 // Import Necessary file 
 import React, { useEffect, useState } from 'react';
 import './Review.css'
+import Rating from 'react-rating'
 
 // Client Review Component 
 const Review = () => {
@@ -23,10 +24,16 @@ const Review = () => {
                         reviews.map((review, index) =>
                             <div key={review._id} className="col-md-4">
                                 <div className="review-content">
-                                    <p>{index}</p>
+                                    {/* <p>{index}</p> */}
                                     <h5>Name: {review.name}</h5>
                                     <p>Email: {review.emial}</p>
-                                    <p>Rating: {review.rating}</p>
+                                    <Rating
+                                        style={{ color: 'gold' }}
+                                        initialRating={review.rating}
+                                        emptySymbol="far fa-star"
+                                        fullSymbol="fas fa-star"
+                                        readonly
+                                    />
                                     <p>message: {review.message}</p>
                                 </div>
                             </div>

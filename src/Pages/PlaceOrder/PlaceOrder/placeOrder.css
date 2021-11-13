@@ -21,4 +21,7 @@ form input, textarea {
     .booking-form input.btn.btn-success {
         width: 50%;
     }
+    form input, textarea {
+        width: 90%;
+    }
 }
