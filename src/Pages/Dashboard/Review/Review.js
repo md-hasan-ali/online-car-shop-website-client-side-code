@@ -11,7 +11,7 @@ const Reviews = () => {
     const history = useHistory()
     const { register, handleSubmit, formState: { errors } } = useForm();
     const onSubmit = data => {
-        fetch('http://localhost:5000/review', {
+        fetch('https://afternoon-oasis-56615.herokuapp.com/review', {
             method: 'POST',
             headers: {
                 'content-type': 'application/json'

@@ -6,7 +6,7 @@ const ManageAllProduct = () => {
     const [deletedCount, setDeletedCount] = useState(null)
 
     useEffect(() => {
-        fetch('http://localhost:5000/manageOrders')
+        fetch('https://afternoon-oasis-56615.herokuapp.com/manageOrders')
             .then(res => res.json())
             .then(data => setManageOrders(data))
     }, [deletedCount])
@@ -14,7 +14,7 @@ const ManageAllProduct = () => {
 
     // delete single order
     const handleDelete = (id) => {
-        fetch(`http://localhost:5000/singleOrder/${id}`, {
+        fetch(`https://afternoon-oasis-56615.herokuapp.com/singleOrder/${id}`, {
             method: 'DELETE',
             headers: {
                 'content-type': 'application/json'

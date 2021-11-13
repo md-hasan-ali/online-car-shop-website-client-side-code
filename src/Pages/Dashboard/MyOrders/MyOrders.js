@@ -7,15 +7,15 @@ const MyOrders = () => {
     const [orders, setOrders] = useState([]);
     const [deletedCount, setDeletedCount] = useState(null)
     useEffect(() => {
-        fetch(`http://localhost:5000/orders?email=${user.email}`)
+        fetch(`https://afternoon-oasis-56615.herokuapp.com/orders?email=${user.email}`)
             .then(res => res.json())
             .then(data => setOrders(data))
-    }, [deletedCount])
+    }, [deletedCount, user.email])
 
     // Delete Single Orders
     const handleDelete = (id) => {
         console.log(id)
-        fetch(`http://localhost:5000/orders?email=${user.email}&id=${id}`, {
+        fetch(`https://afternoon-oasis-56615.herokuapp.com/orders?email=${user.email}&id=${id}`, {
             method: 'DELETE',
             headers: {
                 'content-type': 'application/josn'
