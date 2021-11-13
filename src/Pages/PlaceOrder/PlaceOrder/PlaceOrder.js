@@ -53,7 +53,7 @@ const PlaceOrder = () => {
             <Navigation></Navigation>
             <Container className='py-5'>
                 <div className="section-title">
-                    <h2 className='mb-5 text-center'>Place Order</h2>
+                    <h2 className='mb-5 text-center mt-5'>Place Order</h2>
                 </div>
                 <Row>
                     <Col xs={12} md={6}>

@@ -37,7 +37,7 @@ const Dashboard = () => {
 
             <div className="container-fluid">
                 <div className="row">
-                    <div className="col-md-3 ms-0 ps-0">
+                    <div className="col-md-3 m-0 p-0">
                         <div className="dashboard">
                             <h2 className='text-center pt-3 text-info'>Dashboard</h2>
                             <ul>

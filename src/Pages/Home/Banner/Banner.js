@@ -14,7 +14,7 @@ const Banner = () => {
                             <h2>Our OnLine Car ShoP</h2>
                             <p>definitions of cars say that they run primarily on roads, seat one-to-eight people, have four wheels and mainly transport people rather than goods</p>
                             <button className='btn btn-success me-2'>About Us</button>
-                            <button className='btn btn-danger'>About Us</button>
+                            <button className='btn btn-danger'>Contact Us</button>
                         </div>
                     </div>
                 </div>
