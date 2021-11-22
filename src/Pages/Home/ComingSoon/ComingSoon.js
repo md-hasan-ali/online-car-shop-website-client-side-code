@@ -46,7 +46,7 @@ const ComingSoon = () => {
             <div className="container">
                 <div className="section-title pb-5 text-center">
                     <h2 className='text-success'>Our Comming Soon Products</h2>
-                    <p>If You want to buy our lettest Model Car, Then Your are Welcome!!!</p>
+                    <p>If You want to buy our lettest Model Car, Then Your are Welcome to our Company!!!</p>
                 </div>
                 <div className="row">
                     {
