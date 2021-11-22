@@ -1,6 +1,8 @@
 
 .dashboard {
-    background: linear-gradient(110deg, black,#1b095f,rgb(80, 128, 80),rgb(32, 32, 148), transparent);
+    /* background: linear-gradient(110deg, black,#1b095f,rgb(80, 128, 80),rgb(32, 32, 148), transparent);
+     */
+     background: linear-gradient(3deg ,#5234be ,#157347);
     color: #fff;
     height: 100vh;
 }
@@ -24,7 +26,7 @@
     margin-top: 25px;
 }
 .dashboard-header {
-    background: linear-gradient(3deg, #157347 ,#5234be);
+    background: #5234be;
     padding: 20px 0;
     color: #fff;
     text-align: center;

@@ -31,6 +31,22 @@ const ManageAllProduct = () => {
                 })
         }
     }
+    // update status 
+    const handleUpdate = (id) => {
+        console.log(id)
+        fetch(`http://localhost:5000/updateStatus/${id}`, {
+            method: 'PUT',
+            headers: {
+                'content-type': 'application/json'
+            }
+        })
+            .then(res => res.json())
+            .then(data => {
+                if (data.modifiedCount) {
+                    alert('Product is Approved')
+                }
+            })
+    }
 
     return (
         <div>
@@ -56,7 +72,7 @@ const ManageAllProduct = () => {
                                     <button className='btn btn-success'>{order.status}</button>
                                 </td>
                                 <td>
-                                    <button className='btn btn-info me-2'>Update</button>
+                                    <button onClick={() => handleUpdate(order._id)} className='btn btn-info me-2'>Update</button>
                                     <button onClick={() => handleDelete(order._id)} className='btn btn-danger'>Delete</button>
                                 </td>
 

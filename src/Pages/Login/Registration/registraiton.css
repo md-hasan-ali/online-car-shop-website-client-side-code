@@ -5,6 +5,24 @@ form input, textarea {
     padding: 10px;
 }
 .ragistration-area {
-    background-color: lightslategrey;
+    background-image: url('../../../images/lattest2.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
     margin-top: 60px;
+    position: relative;
+    z-index: 1;
+    margin-top: 60px;
+}
+.ragistration-area::before {
+    position: absolute;
+    content:'';
+    width: 100%;
+    height: 100%;
+    top:0;
+    left: 0;
+    background-color:#122033;
+    opacity: .9;
+    z-index: -1;
 }

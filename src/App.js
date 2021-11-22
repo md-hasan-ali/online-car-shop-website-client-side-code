@@ -3,6 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import './App.css';
 import AuthProvider from './contexts/AuthProvider';
+import About from './Pages/AboutUs/About/About';
+import ContactUs from './Pages/CoctactUs/ContactUs';
 import Dashboard from './Pages/Dashboard/Dashboard/Dashboard';
 import Explore from './Pages/Explore/Explore/Explore';
 import Home from './Pages/Home/Home/Home';
@@ -29,6 +31,14 @@ function App() {
 
             <Route path='/explore'>
               <Explore></Explore>
+            </Route>
+
+            <Route path='/about'>
+              <About></About>
+            </Route>
+
+            <Route path='/contact'>
+              <ContactUs></ContactUs>
             </Route>
 
             <Route path='/dashboard'>

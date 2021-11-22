@@ -31,7 +31,7 @@ const Dashboard = () => {
             <div className='dashboard-header'>
                 <h2>Dashboard</h2>
                 <Link to='/home'>
-                    <button className='btn btn-danger'>Back To Home</button>
+                    <button className='btn btn-danger'> <i class="fas fa-home"></i> Back To Home</button>
                 </Link>
             </div>
 
@@ -56,21 +56,21 @@ const Dashboard = () => {
                                     :
                                     <div>
                                         <li>
-                                            <Link to={`${url}/manageAllOrder`}>Manage All Orders</Link>
+                                            <i class="fas fa-archive pe-2"></i> <Link to={`${url}/manageAllOrder`}>Manage All Orders</Link>
                                         </li>
                                         <li>
-                                            <Link to={`${url}/manageProduct`}>Manage Products</Link>
+                                            <i class="fas fa-tasks pe-2"></i> <Link to={`${url}/manageProduct`}>Manage Products</Link>
                                         </li>
                                         <li>
-                                            <Link to={`${url}/addProduct`}>Add a Product</Link>
+                                            <i class="far fa-plus-square pe-2"></i> <Link to={`${url}/addProduct`}>Add a Product</Link>
                                         </li>
                                         <li>
-                                            <Link to={`${url}/makeAdmin`}>Make Admin</Link>
+                                            <i class="fas fa-people-arrows pe-2"></i> <Link to={`${url}/makeAdmin`}>Make Admin</Link>
                                         </li>
                                     </div>
 
                                 }
-                                <button onClick={handleLogout} className='btn btn-danger mt-4'>Logout</button>
+                                <button onClick={handleLogout} className='btn btn-danger mt-4'> <i class="fas fa-sign-out-alt"></i> Logout</button>
                             </ul>
 
                         </div>

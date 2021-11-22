@@ -79,7 +79,7 @@ const PlaceOrder = () => {
                                 <input placeholder='Phone Number' {...register("Phone")} required />
                                 <textarea placeholder='Address' style={{ height: '120px' }} {...register("address")} required />
 
-                                <input className='btn btn-success' type="submit" value="Order Confirm" />
+                                <button className='btn btn-success' type="submit"><i class="fas fa-shopping-cart"></i> Order Confirm</button>
                             </form>
                         </div>
                     </Col>

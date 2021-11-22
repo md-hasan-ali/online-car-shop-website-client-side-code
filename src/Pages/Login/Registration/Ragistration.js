@@ -5,7 +5,7 @@ import { Link, useHistory } from 'react-router-dom';
 import useAuth from '../../../hooks/useAuth';
 import Footer from '../../Sheard/Footer/Footer';
 import Navigation from '../../Sheard/Navigation/Navigation';
-import loginImg from '../../../images/lattest2.jpg'
+import loginImg from '../../../images/login.svg'
 import './registraiton.css'
 
 // Registration Component 
@@ -76,8 +76,8 @@ const Login = () => {
                             </div>
                         </Col>
                         <Col xs={12} md={7}>
-                            <div className="login-img">
-                                <img style={{ width: '100%' }} src={loginImg} alt="" />
+                            <div className="login-img text-center">
+                                <img style={{ width: '80%' }} src={loginImg} alt="" />
                             </div>
                         </Col>
 

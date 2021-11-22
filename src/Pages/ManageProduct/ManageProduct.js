@@ -14,6 +14,7 @@ const ManageProduct = () => {
             .then(data => setManageProducts(data))
     }, [deletedCount])
     // delete a single product 
+
     const handleDelete = (id) => {
         const proceed = window.confirm('Are You sure,You want to delete?');
         if (proceed) {

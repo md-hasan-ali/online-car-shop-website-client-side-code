@@ -56,6 +56,7 @@ const ComingSoon = () => {
                                     <img width='100%' src={product?.img} alt="" />
                                     <p><strong>Name : </strong> {product?.name}</p>
                                     <p><strong>Price : </strong> {product?.price}</p>
+                                    <button className="btn btn-success"><i class="fas fa-angle-double-right"></i>Advanced Booking</button>
                                 </div>
                             </div>
                         )
