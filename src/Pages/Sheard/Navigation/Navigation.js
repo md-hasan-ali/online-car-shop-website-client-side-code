@@ -30,12 +30,12 @@ const Navigation = () => {
                                     <Link to='/dashboard'>
                                         <button className='btn btn-success me-2'>Dashboard</button>
                                     </Link>
-                                    <button onClick={handleLogout} className='btn btn-danger'> <i class="fas fa-sign-out-alt"></i> Logout</button>
+                                    <button onClick={handleLogout} className='btn btn-danger'> <i className="fas fa-sign-out-alt"></i> Logout</button>
                                     <img src={image} alt="" />
                                 </div>
 
 
-                                : <Nav.Link className='btn btn-danger' as={Link} to="/login"><i class="fas fa-sign-in-alt"></i> Login</Nav.Link>
+                                : <Nav.Link className='btn btn-danger' as={Link} to="/login"><i className="fas fa-sign-in-alt"></i> Login</Nav.Link>
                             }
                         </Nav>
                     </Navbar.Collapse>

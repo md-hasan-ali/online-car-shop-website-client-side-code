@@ -34,7 +34,7 @@ const ManageAllProduct = () => {
     // update status 
     const handleUpdate = (id) => {
         console.log(id)
-        fetch(`http://localhost:5000/updateStatus/${id}`, {
+        fetch(`https://afternoon-oasis-56615.herokuapp.com/updateStatus/${id}`, {
             method: 'PUT',
             headers: {
                 'content-type': 'application/json'
@@ -72,8 +72,8 @@ const ManageAllProduct = () => {
                                     <button className='btn btn-success'>{order.status}</button>
                                 </td>
                                 <td>
-                                    <button onClick={() => handleUpdate(order._id)} className='btn btn-info me-2'>Update</button>
-                                    <button onClick={() => handleDelete(order._id)} className='btn btn-danger'>Delete</button>
+                                    <button onClick={() => handleUpdate(order._id)} className='btn btn-info me-2'>Update <i className="fas fa-edit"></i></button>
+                                    <button onClick={() => handleDelete(order._id)} className='btn btn-danger'> Delete <i className="fas fa-trash-alt"></i></button>
                                 </td>
 
                             </tr>
